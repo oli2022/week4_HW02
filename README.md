@@ -212,3 +212,7 @@ require('./connections/post');
 -   忘記引用套件
 -   忘記設定路徑
 -   太倚賴自動選字功能，常選錯
+
+:bangbang: **Github 跟 Heroku**
+
+-   github 跟 heroku 不要同時 push 會錯亂
