@@ -27,6 +27,15 @@ const postsController = {
             status: ' 單筆資料刪除成功 ',
         });
     },
+    deleteAll: async (req, res) => {
+        if (req.originalUrl === '/api/posts/') {
+            return appError(404, '無此網站路由', next);
+        }
+        postModel.deleteMany({});
+        res.status(200).json({
+            status: ' 刪除全部資料成功 ',
+        });
+    },
 };
 
 module.exports = postsController;
