@@ -2,12 +2,11 @@ const express = require('express');
 
 const router = express.Router();
 
+// 引用其他檔案 - 錯誤訊息
 const { errorHandle, deleteError, deleteAllError, nullError } = require('../servers/errorHandle');
 
 // 引用 postModel.js 檔案
 const postModel = require('../Models/postModel');
-
-// 引用其他檔案 - 錯誤訊息
 
 // 新增、修改、刪除
 const postsController = {
