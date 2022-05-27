@@ -215,4 +215,4 @@ require('./connections/post');
 
 :bangbang: **Github 跟 Heroku**
 
--   github 跟 heroku 不要同時 push 會錯亂
+-   heroku 可以設定與 github 同步佈署
