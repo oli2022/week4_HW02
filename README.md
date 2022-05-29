@@ -203,9 +203,38 @@ require('./connections/post');
     -   新增資料
     -   刪除單筆資料 - ID
     -   刪除全部資料
-    -   更新資料 - ID
+    -   更新單筆資料 - ID
 
 *   錯誤訊息補齊
+
+### 第三階段 📣 📣 📣 合併兩個 collections
+
+#### 本地端
+
+-   新增檔案：usersModels.js 並寫入程式
+-   到 controllers 的 postContr.js 引入 usersModels.js
+-   到 postModel.js 更改內容
+
+```js
+user: {
+            type: mongoose.Schema.ObjectId,
+            ref: 'user', // 來源為collections裡的user資料
+            required: [true, '貼文 id 未填寫'],
+        },
+```
+
+-   測試是否可以 post 資料 (postman)
+
+```js
+{
+    "user":"6292fe984281c8ad8deab7c4",
+    "content":"關聯性資料-03"
+}
+```
+
+-   本地端全部測試
+-   到 mongoDB 雲端新增使用者
+-   測試 heroku (postman)
 
 :warning: **常發生的錯誤**
 
