@@ -12,12 +12,12 @@ const postSchema = new mongoose.Schema(
         },
         createdAt: {
             type: Date,
-            default: Date.now(),
-            select: false,
+            default: Date.now,
         },
-        name: {
-            type: String,
-            required: [true, '貼文姓名未填寫'],
+        user: {
+            type: mongoose.Schema.ObjectId,
+            ref: 'user', // 來源為collections裡的user資料
+            required: [true, '貼文 id 未填寫'],
         },
         likes: {
             type: Number,
